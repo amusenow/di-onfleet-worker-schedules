@@ -58,8 +58,15 @@ function getWorkerMap(allWorkers) {
     const map = {};
     for (let i = 0; i < allWorkers.length; i++) {
         const metadata = allWorkers[i].metadata;
-        //TODO:
-        map['id'] = allWorkers[i];
+        for (let j = 0; j < metadata.length; j++) {
+            const item = metadata[j];
+            const name = item.name;
+            const value = item.value;
+            if (name === 'Employee id') {
+                map[value] = allWorkers[i];
+                break;
+            }
+        }
     }
     return map;
 }
