@@ -19,7 +19,7 @@ module.exports.handler = async function (event, context, callback) {
     let {status, value} = await isValidInput();
 
     if (status) {
-        const result = await SnowflakeRepository.executeQuery(`select * From VW_ATTENDANCE`)
+        const result = await SnowflakeRepository.executeQuery(`SELECT * From VW_ATTENDANCE_TODAY`)
         const {status, body: allWorkers} = await onfleetUtil.getAllWorkers();
         const workerMap = getWorkerMap(allWorkers);
         for (let i = 0; i < result.length; i++) {
