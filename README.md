@@ -1,5 +1,5 @@
 # Cookies Orders Automation
-This project exposes AWS Lambda endpoints that Cookies sends order to. 
+This project creates a scheduled process to set 
 
 ## Project Setup
 If pulling the repository code for the first time, run `./nuke-packages.sh` to install all Node.js modules. 

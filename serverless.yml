@@ -19,6 +19,12 @@ plugins:
   - serverless-dotenv-plugin
   - serverless-iam-roles-per-function
   - serverless-offline
+  - serverless-prune-plugin
+
+custom:
+  prune:
+    automatic: true
+    number: 3
 
 functions:
   di-onfleet-worker-schedules:
